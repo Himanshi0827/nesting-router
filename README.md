@@ -1,70 +1,46 @@
-# Getting Started with Create React App
+### Task Report: Task 3 - Nested Routing in React Router
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# 1. Task Description
+Set up nested routes using React Router for a multi-level menu. The project contains a homepage and a dashboard with sub-pages like Profile and Settings. The Settings page has further nested routes for General and Account settings. The navigation allows users to seamlessly move between different levels of the app and manage their profiles and settings in a structured manner.
 
-## Available Scripts
+# 2. Task Output Screenshot
+<img width="524" alt="image" src="https://github.com/user-attachments/assets/e8acb62e-c498-40ea-90d8-7d92ad8d6691">
+<img width="524" alt="image" src="https://github.com/user-attachments/assets/eded152a-4ad6-416e-b219-70fba29e8faf">
+<img width="524" alt="image" src="https://github.com/user-attachments/assets/575bbb32-bbde-4e7d-a5e2-03a586c146f3">
+<img width="524" alt="image" src="https://github.com/user-attachments/assets/db820775-d7ea-46d0-96b7-5ed261aaa359">
+<img width="524" alt="image" src="https://github.com/user-attachments/assets/5acca16a-142e-4850-b226-ed03c07def43">
+<img width="524" alt="image" src="https://github.com/user-attachments/assets/8c87227d-6603-428d-be53-451fde01236d">
 
-In the project directory, you can run:
 
-### `npm start`
+# 3. Widgets/Algorithm Used in Task
+React Router (BrowserRouter, Routes, Route, and Link):
+oUsed to handle routing between different components in the app.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+BrowserRouter: Wraps the entire app, enabling navigation between pages.
+Routes and Route: Define the routing structure, with nested routes allowing for a hierarchical navigation flow.
+Link: Provides the clickable links for navigation between routes without reloading the page.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Nested Routes:
+Implemented to create multi-level routing.
+The Dashboard component contains routes for Profile and Settings, while Settings itself has nested routes for General and Account.
+Nested routes help structure the app in a way that simulates different sections, each with their own navigation and content.
 
-### `npm test`
+Route Structure:
+Home: Displays the welcome page with a basic description.
+Dashboard: Provides links to sub-pages for managing user profile and settings.
+Profile: A simple page showing the user’s profile information.
+Settings: Contains further links to General settings (theme, notifications) and Account settings (password, email), creating a deep nesting of routes.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+React Components:
+App Component: Contains the main navigation and routing setup. The top-level routes include Home and Dashboard.
+Dashboard Component: Serves as a nested route containing further links to Profile and Settings pages.
+Settings Component: A nested route within Dashboard that contains sub-pages for General and Account settings.
+Profile, General, and Account Components: Display simple static content for their respective pages.
 
-### `npm run build`
+CSS Styling:
+App.css: Provides layout styles for the entire application, including the navbar and content areas.
+Sub-navbar: A dedicated section for the dashboard and settings sub-navigation, making it easy to navigate between nested routes.
+Content Area: Styling ensures that nested routes load content dynamically without page refreshes.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+React State Management:
+While no direct state is managed for routing, the hierarchical routing structure ensures each component manages its content individually based on the current route.
